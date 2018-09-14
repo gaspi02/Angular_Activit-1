@@ -9,10 +9,11 @@
       "projectType": "application",
       "prefix": "app",
       "schematics": {
-        "@schematics/angular:class": {
+        "@schematics/angular:component": {
+          "styleext": "scss",
           "spec": false
         },
-        "@schematics/angular:component": {
+        "@schematics/angular:class": {
           "spec": false
         },
         "@schematics/angular:directive": {
@@ -46,7 +47,7 @@
             ],
             "styles": [
               "./node_modules/bootstrap/dist/css/bootstrap.css",
-              "src/styles.css"
+              "src/styles.scss"
             ],
             "scripts": []
           },
@@ -95,7 +96,7 @@
             "tsConfig": "src/tsconfig.spec.json",
             "karmaConfig": "src/karma.conf.js",
             "styles": [
-              "src/styles.css"
+              "src/styles.scss"
             ],
             "scripts": [],
             "assets": [
