@@ -1,0 +1,16 @@
+<li [ngClass]="{'list-group-item':true,
+                'list-group-item-success': post.loveIts > 0,
+                'list-group-item-danger': post.loveIts < 0}">
+  <div class="row">
+    <div class="col-xs-12">
+      <h1>{{ post.titre }} </h1>
+      <em class="text-info">{{post.created_at | date: 'd MMM y HH:mm:ss' }}</em>
+
+      <p>{{ post.contenu }} <em class="text-info pull-right">Post by {{ post.postBy }}</em> </p>
+
+      <button class="btn btn-success pull-left" (click)="onLove()">J'aime</button>
+      <button class="btn btn-danger pull-left" (click)="outLove()">J'aime pas</button>
+      <button class="btn btn-default pull-right"(click)="onBack()">Retour</button>
+      <button class="btn btn-danger pull-right" (click)="onDeleteSinglePost()">Supprimer</button>
+    </div>
+  </div>
